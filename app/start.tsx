@@ -1,5 +1,4 @@
 import { Link } from "expo-router";
-import React from "react";
 import {
   ImageBackground,
   Pressable,
@@ -12,15 +11,14 @@ const StartScreen = () => {
   return (
     <View style={styles.safe}>
       <ImageBackground
-        source={require("../assets/images/start-image.png")}
+        source={require("../assets/imagesc:\Users\fajrul falah\Downloads\pexels-eberhardgross-1624496.jpg/")}
         style={styles.background}
         imageStyle={styles.image}
       >
         <View style={styles.content}>
-          <Text style={styles.title}>Your Next Adventure Starts Here</Text>
+          <Text style={styles.title}>jadilah petualang yang berkelana</Text>
           <Text style={styles.subtitle}>
-            Life’s too short to stay in one place. Find your next favorite city,
-            beach, or mountain and let's get moving!
+            agar tau isi dunia kita harus menjelajahi bumi
           </Text>
 
           <Link
