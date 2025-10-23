@@ -13,7 +13,7 @@ export default function HomeScreen() {
       <View style={{ position: "relative" }}>
         <Image
           source={{
-            uri: "https://images.pexels.com/photos/33344641/pexels-photo-33344641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+            uri: "https://images.pexels.com/photos/33344641/pexels-photo-33344641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=75",
           }}
           style={{ width: "100%", height: 350 }}
         />
