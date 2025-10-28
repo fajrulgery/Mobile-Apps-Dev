@@ -4,29 +4,28 @@ import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "reac
 export default function HomePage() {
   return (
     <ScrollView
-      style={{ flex: 1, backgroundColor: "#F9F9F9" }} // DIUBAH: Latar belakang utama agar sesuai UI
+      style={{ flex: 1, backgroundColor: "#F9F9F9" }}
       showsVerticalScrollIndicator={false}
     >
-      {/* Header */}
+      {/* Tajuk */}
       <View style={{ padding: 20, paddingTop: 60 }}>
         <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
           <View>
-            <Text style={{ fontSize: 16, color: "#999", marginBottom: 5 }}>Hi,</Text>
+            <Text style={{ fontSize: 16, color: "#999", marginBottom: 5 }}>Hai,</Text>
             <Text style={{ fontSize: 32, fontWeight: "700" }}>Haikal</Text>
           </View>
-          {/* DIUBAH: Ikon Hati dengan Lencana Notifikasi */}
+          
           <View style={{ position: "relative" }}>
             <Image
               source={require("../assets/images/icon-love.png")}
-              style={{ width: 32, height: 32, tintColor: '#333' }} // Ukuran disesuaikan, tintColor agar gelap
+              style={{ width: 32, height: 32, tintColor: '#333' }}
               resizeMode="contain"
             />
-            {/* LENCANA BARU: Ditambahkan sesuai UI */}
             <View style={{
               position: 'absolute',
               top: -5,
               right: -8,
-              backgroundColor: '#FF6B4A', // Warna merah seperti banner
+              backgroundColor: '#FF6B4A',
               borderRadius: 10,
               width: 20,
               height: 20,
@@ -40,7 +39,7 @@ export default function HomePage() {
           </View>
         </View>
 
-        {/* Banner */}
+        {/* Spanduk */}
         <View style={{ 
           backgroundColor: "#FF6B4A", 
           borderRadius: 20, 
@@ -51,13 +50,13 @@ export default function HomePage() {
           marginBottom: 25
         }}>
           <Text style={{ color: "white", fontSize: 28, fontWeight: "700", flex: 1 }}>
-            Plan Your{"\n"}Summer!
+            Rencanakan{"\n"}Musim Panasmu!
           </Text>
           <TouchableOpacity style={{
             backgroundColor: "rgba(255,255,255,0.3)",
             borderRadius: 15,
-            width: 50, // DIUBAH: Sedikit lebih kecil agar proporsional
-            height: 50, // DIUBAH: Sedikit lebih kecil
+            width: 50,
+            height: 50,
             justifyContent: "center",
             alignItems: "center"
           }}>
@@ -65,20 +64,20 @@ export default function HomePage() {
           </TouchableOpacity>
         </View>
 
-        {/* Search Bar */}
+        {/* Bilah Pencarian */}
         <View style={{ flexDirection: "row", alignItems: "center", gap: 15, marginBottom: 25 }}>
           <View style={{
             flex: 1,
             flexDirection: "row",
             alignItems: "center",
-            backgroundColor: "#E8E8E0", // Warna ini sudah sesuai dengan UI
+            backgroundColor: "#E8E8E0",
             borderRadius: 15,
             paddingHorizontal: 20,
             paddingVertical: 15
           }}>
             <Text style={{ fontSize: 20, marginRight: 10 }}>🔍</Text>
             <TextInput
-              placeholder="Search destination..."
+              placeholder="Cari destinasi..."
               placeholderTextColor="#999"
               style={{ flex: 1, fontSize: 16 }}
             />
@@ -93,23 +92,23 @@ export default function HomePage() {
             }}>
               <Image
                 source={require("../assets/images/filter-icon.png")}
-                style={{ width: 28, height: 28 }} // DIUBAH: Ukuran ikon agar proporsional
+                style={{ width: 28, height: 28 }}
                 resizeMode="contain"
               />
             </TouchableOpacity>
         </View>
 
-        {/* Popular Destination Header */}
+        {/* Tajuk Destinasi Populer */}
         <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 15 }}>
-          <Text style={{ fontSize: 22, fontWeight: "700" }}>Popular Destination</Text>
-          <Text style={{ fontSize: 16, color: "#999" }}>View All</Text>
+          <Text style={{ fontSize: 22, fontWeight: "700" }}>Destinasi Populer</Text>
+          <Text style={{ fontSize: 16, color: "#999" }}>Lihat Semua</Text>
         </View>
       </View>
 
-      {/* Destination Cards */}
+      {/* Kartu Destinasi */}
       <View style={{ paddingHorizontal: 20, paddingBottom: 30 }}>
         
-        {/* --- KARTU LABUAN BAJO (DIUBAH TOTAL) --- */}
+        {/* Kartu Bali */}
         <View style={{
           borderRadius: 25,
           overflow: "hidden",
@@ -123,17 +122,14 @@ export default function HomePage() {
               }}
               style={{ width: "100%", height: 280 }}
             />
-            {/* Gradien gelap di bawah agar teks terbaca (Opsional tapi disarankan) */}
             <View style={{
               position: 'absolute',
               bottom: 0,
               left: 0,
               right: 0,
               height: '50%',
-              // backgroundColor: 'rgba(0,0,0,0.3)' // Ganti dengan LinearGradient jika diizinkan
             }} />
 
-            {/* Ikon Hati (Sesuai UI) */}
             <View style={{
               position: "absolute",
               top: 15,
@@ -151,7 +147,6 @@ export default function HomePage() {
               />
             </View>
             
-            {/* Teks Overlay Kiri (Sesuai UI) */}
             <View style={{
               position: "absolute",
               bottom: 20,
@@ -164,11 +159,10 @@ export default function HomePage() {
                 </Text>
               </View>
               <Text style={{ fontSize: 22, fontWeight: "700", color: 'white', textShadowColor: 'rgba(0, 0, 0, 0.7)', textShadowOffset: {width: 1, height: 1}, textShadowRadius: 2 }}>
-                Labuan Bajo
+                Bali
               </Text>
             </View>
 
-            {/* Teks Overlay Kanan (Sesuai UI) */}
             <View style={{
               position: "absolute",
               bottom: 20,
@@ -182,15 +176,13 @@ export default function HomePage() {
                 </Text>
               </View>
               <Text style={{ fontSize: 20, fontWeight: "700", color: "white", textShadowColor: 'rgba(0, 0, 0, 0.7)', textShadowOffset: {width: 1, height: 1}, textShadowRadius: 2 }}>
-                $4.000/pax
+                Rp 100.000/pax
               </Text>
             </View>
           </View>
-          {/* BLOK INI DIHAPUS KARENA DI UI TIDAK ADA */}
-          {/* <View style={{ padding: 20 }}> ... </View> */}
         </View>
 
-        {/* --- KARTU ITALIA (Perubahan Kecil) --- */}
+        {/* Kartu Sukabumi */}
         <View style={{
           borderRadius: 25,
           overflow: "hidden",
@@ -199,7 +191,7 @@ export default function HomePage() {
           <View style={{ position: "relative" }}>
             <Image
               source={{
-                uri: "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=800",
+                uri: "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/02/28/FotoJet-84-1077648917.jpg",
               }}
               style={{ width: "100%", height: 280 }}
             />
@@ -210,14 +202,13 @@ export default function HomePage() {
               width: 45,
               height: 45,
               borderRadius: 22.5,
-              backgroundColor: "rgba(255,255,255,0.9)", // Sesuai UI (ada background)
+              backgroundColor: "rgba(255,255,255,0.9)", 
               justifyContent: "center",
               alignItems: "center"
             }}>
               <Image
-                // DIUBAH: Menggunakan aset fav-icon agar konsisten
                 source={require("../assets/images/fav-icon.png")} 
-                style={{ width: 22, height: 22, tintColor: '#333' }} // Diberi tint agar terlihat di bg putih
+                style={{ width: 22, height: 22, tintColor: '#333' }} 
                 resizeMode="contain"
               />
             </View>
@@ -233,7 +224,7 @@ export default function HomePage() {
               borderRadius: 12
             }}>
               <Text style={{ fontSize: 14, marginRight: 5 }}>📍</Text>
-              <Text style={{ fontSize: 14, fontWeight: "600" }}>Italia</Text>
+              <Text style={{ fontSize: 14, fontWeight: "600" }}>Sukabumi</Text>
             </View>
             <View style={{
               position: "absolute",
@@ -252,7 +243,8 @@ export default function HomePage() {
           </View>
         </View>
       </View>
-
+      
+      {/* Navigasi Bawah */}
       <View style={{
         backgroundColor: "#1A1A2E",
         flexDirection: "row",
@@ -260,17 +252,15 @@ export default function HomePage() {
         paddingVertical: 20,
         paddingBottom: 30
       }}>
-        {/* Tombol Home (Aktif) */}
         <TouchableOpacity style={{ alignItems: "center" }}>
           <View style={{ 
             width: 50, 
             height: 50, 
             borderRadius: 25, 
-            backgroundColor: "#FFFFFF", // Latar belakang putih cerah
+            backgroundColor: "#FFFFFF",
             justifyContent: "center",
             alignItems: "center"
           }}>
-            {/* DIGANTI: Menggunakan Image */}
             <Image 
               source={require("../assets/images/home-icon.png")}
               style={{ width: 24, height: 24, tintColor: '#1A1A2E' }}
@@ -278,7 +268,6 @@ export default function HomePage() {
             />
           </View>
         </TouchableOpacity>
-        {/* Tombol Tengah (Inaktif) */}
         <TouchableOpacity style={{ alignItems: "center" }}>
           <View style={{ 
             width: 50, 
@@ -288,7 +277,6 @@ export default function HomePage() {
             justifyContent: "center",
             alignItems: "center"
           }}>
-            {/* DIGANTI: Menggunakan Image */}
             <Image 
               source={require("../assets/images/ticket-icon.png")}
               style={{ width: 24, height: 24, tintColor: 'rgba(255,255,255,0.7)' }}
@@ -296,7 +284,6 @@ export default function HomePage() {
             />
           </View>
         </TouchableOpacity>
-        {/* Tombol Profil (Inaktif) */}
         <TouchableOpacity style={{ alignItems: "center" }}>
           <View style={{ 
             width: 50, 
@@ -306,7 +293,6 @@ export default function HomePage() {
             justifyContent: "center",
             alignItems: "center"
           }}>
-             {/* DIGANTI: Menggunakan Image */}
              <Image 
               source={require("../assets/images/profile-icon.png")}
               style={{ width: 24, height: 24, tintColor: 'rgba(255,255,255,0.7)' }}
